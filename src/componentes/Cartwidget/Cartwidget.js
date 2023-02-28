@@ -4,9 +4,12 @@ export const Cartwidget = () => {
     return (
         <div>
             
-            <h6>
-              <GiShoppingCart /> 0
-            </h6>
+            <div className="flex">
+                <div className="item1">
+                    <GiShoppingCart color="white" size={30} />
+                </div>
+                <h3 className="item2 ml-2 text-3xl font-bold underline text-white">0</h3>
+            </div>
         </div>
     )
 }

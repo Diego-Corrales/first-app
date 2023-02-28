@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   
   return (
-    <div>
+    <div className="items-center justify-center min-h-screen bg-blue-100">
       <Navbar />      
       <ItemListContainer greeting="Nuestros Productos" />
       {/* <GiShoppingCart /> */}
