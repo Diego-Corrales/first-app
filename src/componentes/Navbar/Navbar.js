@@ -1,5 +1,7 @@
 import './Navbar.scss'
 import logo from './Viking-PNG-Images.png'
+import { Cartwidget } from "../Cartwidget/Cartwidget";
+
 
 export const Navbar = () => {
     return (
@@ -13,7 +15,12 @@ export const Navbar = () => {
                     <a href="#" className="navbar_link">LINK</a>
                     <a href="#" className="navbar_link">LINK</a>
                     <a href="#" className="navbar_link">LINK</a>
+                    
                 </nav>
+                <div>
+                    <Cartwidget />
+                </div>
+                
             </div>
         </header>
     )
