@@ -1,15 +1,41 @@
-import './ItemListContainer.scss'
+// import './ItemListContainer.scss'
+import { useEffect, useState } from "react";
+import pedirDatos from "../../helpers/pedirDatos";
+import ItemList from "../ItemList/ItemList";
 
+const ItemListContainer = () => {
+    
+    const [productos, setProductos] = useState([]);
+    
+    
+    useEffect(() => {
 
-export const ItemListContainer = ({ greeting }) => {
+        pedirDatos()
+            .then((res) => {
+                setProductos(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            .finally(() => {
+                console.log("Finalizado");
+            })
+    }, [])
+
     return (
-        <div className="itemlistcontenedor">
+        <div className="mx-10 my-5 items-center text-center">
             <h2 className="text-3xl font-bold underline">En esta seccion encontraras la lista mas variada y completa de discos y vinilos</h2>
             <br />
             <hr />
-            <p className='item_Parrafo'>En esta seccion podras seleccionar el disco de tu preferencia y agregarlo a tu carrito con un simple clic</p>
-            {greeting}
+            <ItemList items={productos}/>
         </div>
+        
     )
+
+    
 }
 
+export default ItemListContainer
+
+
+    

@@ -1,4 +1,4 @@
-import { ItemListContainer } from "./componentes/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import { Navbar } from "./componentes/Navbar/Navbar";
 /* import { GiShoppingCart } from "react-icons/gi"; */
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="items-center justify-center min-h-screen bg-blue-100">
       <Navbar />      
-      <ItemListContainer greeting="Nuestros Productos" />
+      <ItemListContainer />
       {/* <GiShoppingCart /> */}
 
     </div>
