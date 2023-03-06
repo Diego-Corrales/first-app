@@ -3,7 +3,7 @@ import { Navbar } from "./componentes/Navbar/Navbar";
 /* import { GiShoppingCart } from "react-icons/gi"; */
 
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

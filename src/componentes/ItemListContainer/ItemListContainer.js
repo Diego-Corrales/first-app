@@ -23,7 +23,7 @@ const ItemListContainer = () => {
     }, [])
 
     return (
-        <div className="mx-10 my-5 items-center text-center">
+        <div className="mx-10 my-5 justify-between text-center">
             <h2 className="text-3xl font-bold underline">En esta seccion encontraras la lista mas variada y completa de discos y vinilos</h2>
             <br />
             <hr />
