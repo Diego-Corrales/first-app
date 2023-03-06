@@ -5,11 +5,11 @@ import { Cartwidget } from "../Cartwidget/Cartwidget";
 
 export const Navbar = () => {
     return (
-        <header className="header">
-            <div className="header_container">
+        <header className="bg-red-900">
+            <div className="flex justify-evenly">
                 <hi className="text-4xl text-white font-serif">DISQUERIA "EL VIKINGO"</hi>
                 {/* <img src='.\Imagenes\Viking-PNG-Images.png' className='header_Logo' alt='logo_vikingo' /> */}
-                <img src={logo} alt='logo-vikingo' className='header_Logo'/>
+                <img src={logo} alt='logo-vikingo' className='w-40'/>
 
                 <nav className="navbar">
                     <a href="#" className="navbar_link">LINK</a>
@@ -25,4 +25,5 @@ export const Navbar = () => {
         </header>
     )
 }
+
 
