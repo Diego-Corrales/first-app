@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "Banda": "Metallica",
+        "Discografia": "Metallica",
+        "Precio": "AR$ 1200,00",
+        "img": "https://via.placeholder.com/220"
+    },
+    {
+        "id": "2",
+        "Banda": "Metallica",
+        "Discografia": "Master of Puppets",
+        "Precio": "AR$ 900,00",
+        "img": "https://via.placeholder.com/220"
+    },
+    {
+        "id": "3",
+        "Banda": "Metallica",
+        "Discografia": "Ride the Lightning",
+        "Precio": "AR$ 800,00",
+        "img": "https://via.placeholder.com/220"
+    },
+    {
+        "id": "4",
+        "Banda": "Metallica",
+        "Discografia": "...And Justice for All",
+        "Precio": "AR$ 1000,00",
+        "img": "https://via.placeholder.com/220"
+    },
+    {
+        "id": "5",
+        "Banda": "Metallica",
+        "Discografia": "St. Anger",
+        "Precio": "AR$ 1100,00",
+        "img": "https://via.placeholder.com/220"
+    }
+]
