@@ -1,5 +1,8 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import { Navbar } from "./componentes/Navbar/Navbar";
+import { Home } from "./componentes/Home/Home";
+import { Merchandising } from "./componentes/Merchandising/Merchandising";
 /* import { GiShoppingCart } from "react-icons/gi"; */
 
 
@@ -9,12 +12,18 @@ import { Navbar } from "./componentes/Navbar/Navbar";
 function App() {
   
   return (
-    <div className="items-center justify-center min-h-screen bg-blue-100">
+    <BrowserRouter>
+      
       <Navbar />      
-      <ItemListContainer />
-      {/* <GiShoppingCart /> */}
+      
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/Merchandising" element={ <Merchandising /> } />
+        <Route path="/Discos" element={ <ItemListContainer /> } />
+      </Routes>
 
-    </div>
+    
+    </BrowserRouter>
   );
 }
 
