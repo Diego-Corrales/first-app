@@ -57,16 +57,30 @@
     },
     {
         "id": "9",
-        "Banda": "Morrissey",
+        "Banda": "The Smiths",
         "Discografia": "The queen is dead",
         "Precio": "AR$ 1600,00",
         "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/The-Queen-is-Dead-cover.png/220px-The-Queen-is-Dead-cover.png"
     },
     {
         "id": "10",
-        "Banda": "Morrissey",
+        "Banda": "The Smiths",
         "Discografia": "Meet is murder",
         "Precio": "AR$ 1400,00",
         "img": "https://e.snmc.io/i/600/w/893c6857a1882e4247d9287264e61da9/7762623/the-smiths-meat-is-murder-Cover-Art.jpg"
+    },
+    {
+        "id": "11",
+        "Banda": "The Smiths",
+        "Discografia": "Rank",
+        "Precio": "AR$ 1600,00",
+        "img": "https://upload.wikimedia.org/wikipedia/en/e/e1/SmithsRank.jpg"
+    },
+    {
+        "id": "12",
+        "Banda": "The Smiths",
+        "Discografia": "The sound of The Smiths",
+        "Precio": "AR$ 1400,00",
+        "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81vbza7MDcL._SL1500_.jpg"
     }
 ]
