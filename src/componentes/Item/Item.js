@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom"
 
 
-const Item = ({ item }) => {
+const Item = ( {item} ) => {
     return (
         <div className="flex-row items-center text-center bg-slate-500 rounded-2xl w-80">
             <img src={item.img} alt={item.Banda} className="w-80 h-80 rounded-2xl p-2" />
@@ -11,7 +12,8 @@ const Item = ({ item }) => {
             <br />
             <p className="text-2xl font-bold">{item.Precio}</p>
             <br />
-            <p className="text-2xl font-bold">{item.id}</p>
+            <Link to={`/detail/${Item.id}`} className="rounded-2xl px-10 bg-blue-800 p-2 italic font-bold">Ver Mas</Link>
+            <br />
             <br />
         </div>
     )

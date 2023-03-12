@@ -2,6 +2,7 @@
 import logo from './Viking-PNG-Images.png'
 import { Cartwidget } from "../Cartwidget/Cartwidget";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -19,24 +20,24 @@ export const Navbar = () => {
             <hi className="text-5xl text-white font-serif">VIKING RECORDS</hi>
         </div>
         <div>
-            <img src={logo} alt='logo-vikingo' className='w-40'/>
+            <Link to="/"><img src={logo} alt='logo-vikingo' className='w-40'/></Link>
         </div>
         <div className="relative flex items-center justify-between h-16">
           <div className="flex items-center justify-start">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="px-3 py-2 rounded-md text-md font-medium text-white hover:bg-gray-700"
                 >
                   HOME
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/Merchandising"
                   className="ml-4 px-3 py-2 rounded-md text-md font-medium text-white hover:bg-gray-700"
                 >
                   MERCHANDISING
-                </a>
+                </Link>
                 <div className="relative ml-4">
                   <button
                     onClick={toggleDropdown}
@@ -46,36 +47,36 @@ export const Navbar = () => {
                   </button>
                   {showDropdown && (
                     <div className="absolute z-10 top-full left-0 w-full bg-gray-800 rounded-md shadow-lg py-1">
-                      <a
-                        href="#"
+                      <Link
+                        to="/Discos"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
                         Todos
-                      </a>
-                      <a
-                        href="#"
+                      </Link>
+                      <Link
+                        to="/Discos/Rock"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
                         Rock
-                      </a>
-                      <a
-                        href="#"
+                      </Link>
+                      <Link
+                        to="/Discos/Heavy Metal"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
                         Heavy Metal
-                      </a>
-                      <a
-                        href="#"
+                      </Link>
+                      <Link
+                        to="#"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
                         Black Metal
-                      </a>
-                      <a
-                        href="#"
+                      </Link>
+                      <Link
+                        to="#"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
                         Punk
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>

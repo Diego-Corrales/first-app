@@ -2,17 +2,26 @@
 import { useEffect, useState } from "react";
 import pedirDatos from "../../helpers/pedirDatos";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
     
     const [productos, setProductos] = useState([]);
+
+    const {CategoryId} = useParams();
+
+    console.log(CategoryId);
     
     
     useEffect(() => {
 
         pedirDatos()
             .then((res) => {
-                setProductos(res);
+                if (!CategoryId) {
+                    setProductos(res);
+                } else {
+                    setProductos(res.filter((prod) => prod.Category === CategoryId));
+                }
             })
             .catch((err) => {
                 console.log(err);
@@ -20,7 +29,7 @@ const ItemListContainer = () => {
             .finally(() => {
                 console.log("Finalizado");
             })
-    }, [])
+    }, [CategoryId])
 
     return (
         <div className="mx-10 my-5 justify-between text-center">

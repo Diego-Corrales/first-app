@@ -4,83 +4,95 @@
         "Banda": "Metallica",
         "Discografia": "Metallica",
         "Precio": "AR$ 1200,00",
-        "img": "https://m.media-amazon.com/images/I/61Na6eN05jS._SL1500_.jpg"
+        "img": "https://m.media-amazon.com/images/I/61Na6eN05jS._SL1500_.jpg",
+        "Category": "Heavy Metal"
     },
     {
         "id": "2",
         "Banda": "Metallica",
         "Discografia": "Master of Puppets",
         "Precio": "AR$ 900,00",
-        "img": "https://cdn.shopify.com/s/files/1/0576/8616/3620/products/00042283814127_1024x.jpg?v=1635790052"
+        "img": "https://cdn.shopify.com/s/files/1/0576/8616/3620/products/00042283814127_1024x.jpg?v=1635790052",
+        "Category": "Heavy Metal"
     },
     {
         "id": "3",
         "Banda": "Metallica",
         "Discografia": "Ride the Lightning",
         "Precio": "AR$ 800,00",
-        "img": "https://m.media-amazon.com/images/I/716FcW7qgSL._SY450_.jpg"
+        "img": "https://m.media-amazon.com/images/I/716FcW7qgSL._SY450_.jpg",
+        "Category": "Heavy Metal"
     },
     {
         "id": "4",
         "Banda": "Metallica",
         "Discografia": "...And Justice for All",
         "Precio": "AR$ 1000,00",
-        "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41ZrC0FEACL.jpg"
+        "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41ZrC0FEACL.jpg",
+        "Category": "Heavy Metal"
     },
     {
         "id": "5",
         "Banda": "Metallica",
         "Discografia": "St. Anger",
         "Precio": "AR$ 1100,00",
-        "img": "https://upload.wikimedia.org/wikipedia/tr/7/74/StangerKapak.jpg"
+        "img": "https://upload.wikimedia.org/wikipedia/tr/7/74/StangerKapak.jpg",
+        "Category": "Heavy Metal"
     },
     {
         "id": "6",
         "Banda": "Morrissey",
         "Discografia": "Viva Hate",
         "Precio": "AR$ 1100,00",
-        "img": "https://img.cdandlp.com/2012/10/imgL/115585311.jpg"
+        "img": "https://img.cdandlp.com/2012/10/imgL/115585311.jpg",
+        "Category": "Rock"
     },
     {
         "id": "7",
         "Banda": "Morrissey",
         "Discografia": "You are the Quarry",
         "Precio": "AR$ 1500,00",
-        "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51iYiwpkUML._SY355_.jpg"
+        "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51iYiwpkUML._SY355_.jpg",
+        "Category": "Rock"
     },
     {
         "id": "8",
         "Banda": "Morrissey",
         "Discografia": "Kill Uncle",
         "Precio": "AR$ 1100,00",
-        "img": "https://i.ebayimg.com/images/g/uKUAAOSwdMZiPcQB/s-l500.jpg"
+        "img": "https://i.ebayimg.com/images/g/uKUAAOSwdMZiPcQB/s-l500.jpg",
+        "Category": "Rock"
     },
     {
         "id": "9",
         "Banda": "The Smiths",
         "Discografia": "The queen is dead",
         "Precio": "AR$ 1600,00",
-        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/The-Queen-is-Dead-cover.png/220px-The-Queen-is-Dead-cover.png"
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/The-Queen-is-Dead-cover.png/220px-The-Queen-is-Dead-cover.png",
+        "Category": "Rock"
     },
     {
         "id": "10",
         "Banda": "The Smiths",
         "Discografia": "Meet is murder",
         "Precio": "AR$ 1400,00",
-        "img": "https://e.snmc.io/i/600/w/893c6857a1882e4247d9287264e61da9/7762623/the-smiths-meat-is-murder-Cover-Art.jpg"
+        "img": "https://e.snmc.io/i/600/w/893c6857a1882e4247d9287264e61da9/7762623/the-smiths-meat-is-murder-Cover-Art.jpg",
+        "Category": "Rock"
     },
     {
         "id": "11",
         "Banda": "The Smiths",
         "Discografia": "Rank",
         "Precio": "AR$ 1600,00",
-        "img": "https://upload.wikimedia.org/wikipedia/en/e/e1/SmithsRank.jpg"
+        "img": "https://upload.wikimedia.org/wikipedia/en/e/e1/SmithsRank.jpg",
+        "Category": "Rock"
     },
     {
         "id": "12",
         "Banda": "The Smiths",
         "Discografia": "The sound of The Smiths",
         "Precio": "AR$ 1400,00",
-        "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81vbza7MDcL._SL1500_.jpg"
+        "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81vbza7MDcL._SL1500_.jpg",
+        "Category": "Rock"
     }
 ]

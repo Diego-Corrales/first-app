@@ -9,3 +9,12 @@ const pedirDatos = () => {
 }
 
 export default pedirDatos;
+
+export const pedirProductoPorId = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const producto = MOCK_DATA.find((prod) => prod.id === id);
+            resolve(producto);
+        }, 2000);
+    });
+}
