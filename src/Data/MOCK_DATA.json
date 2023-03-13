@@ -94,5 +94,69 @@
         "Precio": "AR$ 1400,00",
         "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81vbza7MDcL._SL1500_.jpg",
         "Category": "Rock"
+    },
+    {
+        "id": "13",
+        "Banda": "Dimmu Borgir",
+        "Discografia": "The invaluable Darkness",
+        "Precio": "AR$ 1100,00",
+        "img": "https://m.media-amazon.com/images/I/51YGjX9z+kL._AC_.jpg",
+        "Category": "Black Metal"
+    },
+    {
+        "id": "14",
+        "Banda": "Dimmu Borgir",
+        "Discografia": "Spiritual Black Dimensions",
+        "Precio": "AR$ 1400,00",
+        "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Spiritual_black_dimensions.jpg",
+        "Category": "Black Metal"
+    },
+    {
+        "id": "15",
+        "Banda": "Dimmu Borgir",
+        "Discografia": "Northern Forces Over Wacken",
+        "Precio": "AR$ 1200,00",
+        "img": "https://bigdipper.no/Media/Cache/Images/1/7/WEB_Image_Dimmu_Borgir_Northern_Forces_Over_Wacken_4065629601614_2-1770226876_plid_144267.Jpeg",
+        "Category": "Black Metal"
+    },
+    {
+        "id": "16",
+        "Banda": "Dimmu Borgir",
+        "Discografia": "Dust of Cold Memories",
+        "Precio": "AR$ 1600,00",
+        "img": "https://is2-ssl.mzstatic.com/image/thumb/Music122/v4/de/03/44/de034448-8524-d36e-fada-a2ed6cd6a7db/cover.jpg/1200x1200bb.jpg",
+        "Category": "Black Metal"
+    },
+    {
+        "id": "17",
+        "Banda": "Michael Jackson",
+        "Discografia": "Dangerous",
+        "Precio": "AR$ 2000,00",
+        "img": "https://m.media-amazon.com/images/I/61a4S4OE3XL._SY355_.jpg",
+        "Category": "Pop"
+    },
+    {
+        "id": "18",
+        "Banda": "Michael Jackson",
+        "Discografia": "Thriller",
+        "Precio": "AR$ 2200,00",
+        "img": "https://hadikarimi.com/wp-content/uploads/2019/06/Jackson-1.jpg",
+        "Category": "Pop"
+    },
+    {
+        "id": "19",
+        "Banda": "Michael Jackson",
+        "Discografia": "Bad",
+        "Precio": "AR$ 1800,00",
+        "img": "https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png",
+        "Category": "Pop"
+    },
+    {
+        "id": "20",
+        "Banda": "Michael Jackson",
+        "Discografia": "This is It",
+        "Precio": "AR$ 25000,00",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_645858-MLM31170129536_062019-O.jpg",
+        "Category": "Pop"
     }
 ]

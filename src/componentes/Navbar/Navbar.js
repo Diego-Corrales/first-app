@@ -66,16 +66,16 @@ export const Navbar = () => {
                         Heavy Metal
                       </Link>
                       <Link
-                        to="#"
+                        to="/Discos/Black Metal"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
                         Black Metal
                       </Link>
                       <Link
-                        to="#"
+                        to="/Discos/Pop"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
-                        Punk
+                        Pop
                       </Link>
                     </div>
                   )}
@@ -92,49 +92,3 @@ export const Navbar = () => {
   );
 }
 
-
-
-// export const Navbar = () => {
-    
-//     return (
-//         <header className="relative mx-auto p-6 bg-slate-800 ">
-            
-            
-            
-//             <nav className="flex justify-around items-center">
-//                 <hi className="text-4xl text-white font-serif">DISQUERIA "EL VIKINGO"</hi>
-//                 {/* <img src='.\Imagenes\Viking-PNG-Images.png' className='header_Logo' alt='logo_vikingo' /> */}
-//                 <img src={logo} alt='logo-vikingo' className='w-40'/>
-
-//                 <ul className="hidden md:flex justify-between items-center gap-10">
-                    
-//                     <li>
-//                         <a href="#" className="text-2xl text-white hover:text-yellow-400 hover:text-  font-serif">HOME</a>
-//                     </li>
-//                     <li>
-//                         <a href="#" className="text-2xl text-white hover:text-yellow-400 hover:text-  font-serif">DISCOS</a>
-//                         <ul className='absolute bg-amber-400'>
-//                             <li>
-//                                 <a>Heavy Metal</a>
-//                             </li>
-//                             <li>
-//                                 <a>Rock</a>
-//                             </li>
-//                         </ul>
-//                     </li>
-//                     <li>
-//                         <a href="#" className="text-2xl text-white hover:text-yellow-400 hover:text-  font-serif">MERCHANDISING</a>
-//                     </li>
-//                     <li>
-//                         <a href="#" className="text-2xl text-white hover:text-yellow-400 hover:text-  font-serif">SHOWS</a>
-//                     </li>
-                    
-//                 </ul>
-//                 <div>
-//                     <Cartwidget />
-//                 </div>
-                
-//             </nav>
-//         </header>
-//     )
-// }
