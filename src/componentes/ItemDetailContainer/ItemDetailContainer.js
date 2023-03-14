@@ -18,10 +18,10 @@ export const ItemDetailContainer = () => {
         
         pedirProductoPorId( Number(itemId) )
             .then((resp) => {
-                setItem(resp);
+                setItem(resp)
             })
             .finally(() => {
-                setLoading(false);
+                setLoading(false)
             })
     }, [itemId])
 
