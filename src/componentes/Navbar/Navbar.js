@@ -17,7 +17,7 @@ export const Navbar = () => {
     <nav className="bg-gray-800 p-6">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-around items-center">
         <div>
-            <hi className="text-5xl text-white font-serif">VIKING RECORDS</hi>
+            <h1 className="text-white text-5xl 1ont-serif">VIKING RECORDS</h1>
         </div>
         <div>
             <Link to="/"><img src={logo} alt='logo-vikingo' className='w-40'/></Link>

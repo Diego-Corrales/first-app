@@ -1,12 +1,26 @@
-import { useNavigate } from "react-router"
-import { ItemCount } from "../ItemCount/ItemCount";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import ItemCount from "../ItemCount/ItemCount"
 
 
 const ItemDetail = ({item}) => {
-    const navigate = useNavigate();
+    const [cantidad, setCantidad] = useState(1)
+    
+    const navigate = useNavigate()
+
+    
 
     const handleVolver = () => {
-        navigate(-1);
+        navigate(-1)
+    }
+
+    const handleAgregar = () => {
+        const newItem = {
+            ...item,
+            cantidad,
+        }
+
+        console.log(newItem)
     }
     
     return (
@@ -21,9 +35,15 @@ const ItemDetail = ({item}) => {
                     <br />
                     <button onClick={handleVolver} className="rounded-2xl px-10 bg-blue-800 p-2 italic font-bold">Volver</button>
                     <br />
-                    <div className="py-4">
-                        <ItemCount max={item.Stock}/>
-                    </div>
+                    
+                    <ItemCount 
+                        max={item.Stock}
+                        cantidad={cantidad}
+                        setCantidad={setCantidad}
+                        handleAgregar={handleAgregar}
+                    />
+                    
+                    
                 </div>
                 <div className="flex w-full md:w-1/2 justify-end">
                     <img src={item.img} alt={item.Banda} className="w-4/6 rounded-2xl p-2" />
