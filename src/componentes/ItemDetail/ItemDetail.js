@@ -1,24 +1,32 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount"
+import { useContext } from "react";
 
 
 const ItemDetail = ({item}) => {
+    // funcion para agregar al carrito
+    const { agregarAlCarrito } = useContext(CartContext)
+    
+    // cantidad de items a comprar
     const [cantidad, setCantidad] = useState(1)
     
+    // funcion para volver atras
     const navigate = useNavigate()
-
-    
 
     const handleVolver = () => {
         navigate(-1)
     }
 
+    // funcion para agregar al carrito
     const handleAgregar = () => {
         const newItem = {
             ...item,
             cantidad,
         }
+
+        agregarAlCarrito(newItem)
 
         console.log(newItem)
     }

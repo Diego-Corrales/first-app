@@ -1,18 +1,31 @@
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import { Navbar } from "./componentes/Navbar/Navbar";
 import { Home } from "./componentes/Home/Home";
 import { Merchandising } from "./componentes/Merchandising/Merchandising";
 import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetailContainer";
-/* import { GiShoppingCart } from "react-icons/gi"; */
+import { CartContext } from "./context/CartContext";
+import { useState } from "react"
 
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
+// CONTINUAR EN EL MINUTO 00:40:00 DE LA CLASE CONTEXTO
 
 function App() {
+
+  // definimos el estado del carrito y el contexto
+  const [cart, setCart] = useState([])
+
+  // definimos la funcion para agregar al carrito
+  const agregarAlCarrito = (item) => {
+    setCart([...cart, item])
+  }
   
   return (
+    <CartContext.Provider value={{
+      cart,
+      agregarAlCarrito
+    }}>
+
     <BrowserRouter>
       
       <Navbar />      
@@ -27,6 +40,9 @@ function App() {
 
     
     </BrowserRouter>
+
+    </CartContext.Provider>
+    
   );
 }
 
