@@ -5,43 +5,33 @@ import { Navbar } from "./componentes/Navbar/Navbar";
 import { Home } from "./componentes/Home/Home";
 import { Merchandising } from "./componentes/Merchandising/Merchandising";
 import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetailContainer";
-import { CartContext } from "./context/CartContext";
-import { useState } from "react"
+import { CartProvider } from "./context/CartContext";
+import { Cart } from "./componentes/Cart/Cart";
 
-// CONTINUAR EN EL MINUTO 00:40:00 DE LA CLASE CONTEXTO
 
+// toda la aplicacion esta dentro del CartProvider que se recibe por children y ubicandose en el contexto de CartContext
 function App() {
-
-  // definimos el estado del carrito y el contexto
-  const [cart, setCart] = useState([])
-
-  // definimos la funcion para agregar al carrito
-  const agregarAlCarrito = (item) => {
-    setCart([...cart, item])
-  }
   
   return (
-    <CartContext.Provider value={{
-      cart,
-      agregarAlCarrito
-    }}>
+    <CartProvider>
 
-    <BrowserRouter>
+      <BrowserRouter>
+        
+        <Navbar />      
+        
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/Merchandising" element={ <Merchandising /> } />
+          <Route path="/Discos" element={ <ItemListContainer /> } />
+          <Route path="/Discos/:CategoryId" element={ <ItemListContainer /> } />
+          <Route path="/detail/:itemId" element={ <ItemDetailContainer /> } />
+          <Route path="/Cart" element={ <Cart /> } />
+        </Routes>
+
       
-      <Navbar />      
-      
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/Merchandising" element={ <Merchandising /> } />
-        <Route path="/Discos" element={ <ItemListContainer /> } />
-        <Route path="/Discos/:CategoryId" element={ <ItemListContainer /> } />
-        <Route path="/detail/:itemId" element={ <ItemDetailContainer /> } />
-      </Routes>
+      </BrowserRouter>
 
-    
-    </BrowserRouter>
-
-    </CartContext.Provider>
+    </CartProvider>
     
   );
 }
