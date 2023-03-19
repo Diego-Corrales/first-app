@@ -1,11 +1,12 @@
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
+import { BsFillTrashFill } from "react-icons/bs"
 
 
 // esta funcion se encarga de mostrar el carrito de compras
 export const Cart = () => {
     
-    const { cart } = useContext(CartContext)
+    const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext)
 
     return (
         <div>
@@ -19,16 +20,18 @@ export const Cart = () => {
                         <p className="text-2xl font-bold">Disco: {prod.Discografia}</p>
                         <img src={prod.img} alt={prod.Banda} className="rounded-2xl p-2 w-40" />
                         <p>Cantidad: {prod.cantidad}</p>
-                        <small>Precio: {prod.Precio}</small>
-                        <small>Precio Total: ${prod.Precio * prod.cantidad}</small>
+                        <small>Precio: AR${prod.Precio}</small>
+                        <small>Precio Total: AR${prod.Precio * prod.cantidad}</small>
+                        <button onClick={() => eliminarDelCarrito(prod.id)}><BsFillTrashFill/></button>
 
                     </div>
                 ))
             }
 
-            <h3>Total de tu compra</h3>
+            <h3 className='py-4 text-2xl text-lime-800 font-bold'>Total de tu compra: AR${totalCompra()}</h3>
+            <button onClick={vaciarCarrito} className='bg-red-800 px-10 rounded-2xl py-2 text-white font-bold text-2xl'>
+                Vaciar Carrito
+            </button>
         </div>
     )
 }
-
-// continuar en minuto 1:22:00 de la clase 10 de react

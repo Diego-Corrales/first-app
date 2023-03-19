@@ -24,6 +24,23 @@ export const CartProvider = ( {children} ) => {
     const totalCantidad = () => {
         return cart.reduce((acc, prod) => acc + prod.cantidad, 0)
     }
+
+    // definimos la funcion para saber el total de la compra
+    const totalCompra = () => {
+        return cart.reduce((acc, prod) => acc + prod.Precio * prod.cantidad, 0)
+    }
+
+    // definimos la funcion para vaciar el carrito
+    const vaciarCarrito = () => {
+        setCart([])
+    }
+
+    // definimos la funcion para eliminar un producto del carrito
+    const eliminarDelCarrito = (id) => {
+        setCart( cart.filter((prod) => prod.id !== id))
+    }
+
+    
     
     // retorna el proveedor del contexto
     return (
@@ -32,7 +49,10 @@ export const CartProvider = ( {children} ) => {
             cart,
             agregarAlCarrito,
             isInCart,
-            totalCantidad
+            totalCantidad,
+            totalCompra,
+            vaciarCarrito,
+            eliminarDelCarrito
         }}>
             {children}
 

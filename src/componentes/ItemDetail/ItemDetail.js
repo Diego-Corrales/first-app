@@ -44,7 +44,7 @@ const ItemDetail = ({item}) => {
                     <br />
                     <p className="text-2xl font-bold text-center">{item.Discografia}</p>
                     <br />
-                    <p className="text-2xl font-bold text-center">{item.Precio}</p>
+                    <p className="text-2xl font-bold text-center">AR${item.Precio}</p>
                     <br />
                     
                     {/* operador ternario que define si no hay item, agregarlo al carrito, si ya esta en el carrito, brinda opcion de terminar compra */}
