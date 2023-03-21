@@ -34,6 +34,15 @@ const ItemDetail = ({item}) => {
         console.log(newItem)
     }
     
+    if (item.Stock === 0) {
+        return (
+            <div>
+                <h2 className="text-2xl text-center py-10">No hay stock disponible</h2>
+            </div>
+        )
+    }
+
+    // renderizado condicional mediante && que, cuando el stock es menor a 2 unidades, muestra un mensaje avisando que quedan pocas unidades
     return (
         <main className="m-4">
             <div className="bg-stone-400 w-full h-full flex flex-wrap px-8 py-2 rounded-2xl">
@@ -46,6 +55,7 @@ const ItemDetail = ({item}) => {
                     <br />
                     <p className="text-2xl font-bold text-center">AR${item.Precio}</p>
                     <br />
+                    { item.Stock <= 2 && <p>Queda solo {item.Stock} unidades!</p> }
                     
                     {/* operador ternario que define si no hay item, agregarlo al carrito, si ya esta en el carrito, brinda opcion de terminar compra */}
                     {
@@ -73,3 +83,5 @@ const ItemDetail = ({item}) => {
 }
 
 export default ItemDetail
+
+// continuar en el minuto 39:00 del video renderizado condicional

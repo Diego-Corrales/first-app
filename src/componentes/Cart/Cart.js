@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { BsFillTrashFill } from "react-icons/bs"
+import { Link } from 'react-router-dom'
 
 
 // esta funcion se encarga de mostrar el carrito de compras
@@ -8,6 +9,20 @@ export const Cart = () => {
     
     const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext)
 
+    // si el carrito esta vacio muestra un mensaje y un boton para volver al inicio
+    // usamos early return como renderizado condicional
+    if (cart.length === 0) {
+        return (
+            <div className='text-center py-2'>
+                <h2 className="text-2xl text-center py-10">No tienes productos en tu carrito de compras</h2>
+                <hr className='py-6' />
+                <Link to="/" className='bg-red-800 px-10 py-2 font-bold text-white rounded-2xl text-2xl'>Volver a inicio</Link>
+            </div>
+        )
+    }
+    
+
+    // si el carrito tiene productos, muestra el carrito
     return (
         <div>
             <h2 className="text-2xl text-center py-2">Tu Carrito de Compras</h2>
