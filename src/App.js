@@ -7,6 +7,7 @@ import { Merchandising } from "./componentes/Merchandising/Merchandising";
 import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./componentes/Cart/Cart";
+import { Footer } from "./componentes/Footer/Footer";
 
 
 // toda la aplicacion esta dentro del CartProvider que se recibe por children y ubicandose en el contexto de CartContext
@@ -27,6 +28,8 @@ function App() {
           <Route path="/detail/:itemId" element={ <ItemDetailContainer /> } />
           <Route path="/Cart" element={ <Cart /> } />
         </Routes>
+
+        <Footer />
 
       
       </BrowserRouter>

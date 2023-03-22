@@ -12,7 +12,7 @@ const Item = ( {item} ) => {
             <br />
             <p className="text-2xl font-bold">AR${item.Precio}</p>
             <br />
-            <Link to={`/detail/${item.id}`} className="rounded-2xl px-10 bg-blue-800 p-2 italic font-bold">Ver Mas</Link>
+            <Link to={`/detail/${item.id}`} className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-lg px-10 py-2.5 text-center mr-2 mb-2">Ver Mas</Link>
             <br />
             <br />
         </div>
