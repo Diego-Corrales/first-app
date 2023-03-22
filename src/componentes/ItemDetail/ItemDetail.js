@@ -43,6 +43,7 @@ const ItemDetail = ({item}) => {
     }
 
     // renderizado condicional mediante && que, cuando el stock es menor a 2 unidades, muestra un mensaje avisando que quedan pocas unidades
+    // condicional dentro de otro condicional, que si el stock es menor a 2 unidades, muestra un mensaje avisando que quedan pocas unidades
     return (
         <main className="m-4">
             <div className="bg-stone-400 w-full h-full flex flex-wrap px-8 py-2 rounded-2xl">
@@ -55,7 +56,15 @@ const ItemDetail = ({item}) => {
                     <br />
                     <p className="text-2xl font-bold text-center">AR${item.Precio}</p>
                     <br />
-                    { item.Stock <= 2 && <p>Queda solo {item.Stock} unidades!</p> }
+                    { item.Stock <= 2 && 
+                        <p className="text-center text-2xl font-bold text-red-600">
+                            {
+                                item.Stock === 1
+                                    ? `¡Queda solo 1 unidad!`
+                                    : `¡Quedan solo ${item.Stock} unidades!`
+                            }
+                        </p> 
+                    }
                     
                     {/* operador ternario que define si no hay item, agregarlo al carrito, si ya esta en el carrito, brinda opcion de terminar compra */}
                     {
