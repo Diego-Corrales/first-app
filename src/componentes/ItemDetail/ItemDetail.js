@@ -92,5 +92,3 @@ const ItemDetail = ({item}) => {
 }
 
 export default ItemDetail
-
-// continuar en el minuto 39:00 del video renderizado condicional

@@ -59,5 +59,3 @@ export const LoginScreen = () => {
         </div>
     )
 }
-
-// continuar en el minuto 53:00
