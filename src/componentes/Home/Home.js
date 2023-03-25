@@ -2,7 +2,7 @@
 
 export const Home = () => {
     return (
-        <main>
+        <main className="container w-full max-h-screen">
             <div className="text-center">
                 <h2 className="text-3xl p-4">Bienvenidos a nuestra disqueria</h2>
                 <p className="text-2xl p-4">En nuestra pagina encontraran la coleccion de discos mas variada y especial, asi como tambien el mejor Merchandising "oficial" de tus bandas favoritas</p>

@@ -6,6 +6,7 @@ import { AppRouter } from "./routes/AppRouter";
 
 
 // toda la aplicacion esta dentro del CartProvider que se recibe por children y ubicandose en el contexto de CartContext
+// importamos el AppRouter que se recibe por children y ubicandose en el contexto de LoginContext
 function App() {
 
   return (

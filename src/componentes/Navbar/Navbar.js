@@ -3,11 +3,14 @@ import logo from './Viking-PNG-Images.png'
 import { Cartwidget } from "../Cartwidget/Cartwidget";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { LoginContext } from "../../context/LoginContext";
+import { useContext } from "react";
 
 
 
 export const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { user, logout } = useContext(LoginContext);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -28,20 +31,20 @@ export const Navbar = () => {
               <div className="ml-10 flex items-baseline">
                 <Link
                   to="/"
-                  className="px-3 py-2 rounded-md text-md font-medium text-white hover:bg-gray-700"
+                  className="px-3 py-2 rounded-md text-lg font-medium text-white hover:bg-gray-700"
                 >
                   HOME
                 </Link>
                 <Link
                   to="/Merchandising"
-                  className="ml-4 px-3 py-2 rounded-md text-md font-medium text-white hover:bg-gray-700"
+                  className="ml-4 px-3 py-2 rounded-md text-lg font-medium text-white hover:bg-gray-700"
                 >
                   MERCHANDISING
                 </Link>
                 <div className="relative ml-4">
                   <button
                     onClick={toggleDropdown}
-                    className="px-3 py-2 rounded-md text-md font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring"
+                    className="px-3 py-2 rounded-md text-lg font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring"
                   >
                     DISCOS 🔽
                   </button>
@@ -87,6 +90,10 @@ export const Navbar = () => {
         <div>
             <Cartwidget />
         </div>
+      </div>
+      <div className='flex justify-between items-center'>
+        <h5 className='text-white text-lg'>Bienvenido {user.email}</h5>
+        <button className='bg-white rounded-2xl px-4 py-2' onClick={logout}>Logout</button>
       </div>
     </nav>
   );

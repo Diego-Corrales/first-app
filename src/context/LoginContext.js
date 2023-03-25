@@ -42,14 +42,21 @@ export const LoginProvider = ({children}) => {
         }
     }
 
-
+    // creamos una funcion de logout
+    const logout = () => {
+        setUser({
+            email: null,
+            logged: false
+        })
+    }
 
     
     // retorna el contexto de LoginContext con el valor de user y el children
     return (
         <LoginContext.Provider value={{
             user,
-            tryLogin
+            tryLogin,
+            logout
         }}>
             {children}
         </LoginContext.Provider>

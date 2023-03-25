@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route} from "react-router-dom";
 import ItemListContainer from "../componentes/ItemListContainer/ItemListContainer";
 import { Navbar } from "../componentes/Navbar/Navbar";
 import { Home } from "../componentes/Home/Home";
@@ -11,7 +11,7 @@ import { LoginContext } from "../context/LoginContext";
 import { useContext } from "react";
 
 
-
+// usamos contexto de LoginContext para mostrar el componente Navbar y el Footer solo si el usuario esta logueado y lo consumimos en App
 export const AppRouter = () => {
 
     const { user } = useContext(LoginContext)
@@ -24,7 +24,7 @@ export const AppRouter = () => {
                 <Navbar />      
           
                 <Routes>
-                  <Route path="/" element={ <Home /> } />
+                  <Route path="/:Home" element={ <Home /> } />
                   <Route path="/Merchandising" element={ <Merchandising /> } />
                   <Route path="/Discos" element={ <ItemListContainer /> } />
                   <Route path="/Discos/:CategoryId" element={ <ItemListContainer /> } />
