@@ -1,8 +1,9 @@
 
 import { useEffect, useState } from "react";
-import pedirDatos from "../../helpers/pedirDatos";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { dataBase } from "../../firebase/config";
 
 const ItemListContainer = () => {
     
@@ -14,21 +15,20 @@ const ItemListContainer = () => {
     
     
     useEffect(() => {
+        
+        // referencia a la coleccion de firebase
+        const productosRef = collection(dataBase, "discos")
 
-        pedirDatos()
-            .then((res) => {
-                if (!CategoryId) {
-                    setProductos(res);
-                } else {
-                    setProductos(res.filter((prod) => prod.Category === CategoryId));
-                }
+        // consumimos la coleccion de firebase
+        // obtenemos una respuesta con los documentos de la coleccion y los mapeamos para obtener un array de objetos ademas de agregar el id de cada documento
+        getDocs(productosRef)
+        .then((res) => {
+            const arrayProductos = res.docs.map((doc) => {
+                return { ...doc.data(), id: doc.id }
             })
-            .catch((err) => {
-                console.log(err);
-            })
-            .finally(() => {
-                console.log("Finalizado");
-            })
+            setProductos(arrayProductos)
+        })
+        
     }, [CategoryId])
 
     return (
