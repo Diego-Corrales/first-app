@@ -30,7 +30,7 @@ export const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline">
                 <Link
-                  to="/"
+                  to="/Home"
                   className="px-3 py-2 rounded-md text-lg font-medium text-white hover:bg-gray-700"
                 >
                   HOME

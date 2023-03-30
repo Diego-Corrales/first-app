@@ -16,7 +16,7 @@ export const Cart = () => {
             <div className='text-center py-2'>
                 <h2 className="text-2xl text-center py-10">No tienes productos en tu carrito de compras</h2>
                 <hr className='py-6' />
-                <Link to="/" className='bg-red-800 px-10 py-2 font-bold text-white rounded-2xl text-2xl'>Volver a inicio</Link>
+                <Link to="/Home" className='bg-red-800 px-10 py-2 font-bold text-white rounded-2xl text-2xl'>Volver a inicio</Link>
             </div>
         )
     }
