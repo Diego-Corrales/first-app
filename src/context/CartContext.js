@@ -1,14 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 // creamos un custom provider para el carrito de compras
 export const CartContext = createContext()
 
+// creamos una funcion que inicializa el carrito con los datos del localStorage
+const init = JSON.parse(localStorage.getItem('cart')) || []
+
 // centralizamos la funcionalidad del carrito en un componente, lo importamos en App.js
 export const CartProvider = ( {children} ) => {
         
     // definimos el estado del carrito y el contexto
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(init)
 
     // definimos la funcion para agregar al carrito
     const agregarAlCarrito = (item) => {
@@ -40,7 +43,10 @@ export const CartProvider = ( {children} ) => {
         setCart( cart.filter((prod) => prod.id !== id))
     }
 
-    
+    // guardamos el carrito en el localStorage para que no se pierda al recargar la pagina
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart])
     
     // retorna el proveedor del contexto
     return (

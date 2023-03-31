@@ -47,6 +47,7 @@ export const Cart = () => {
             <button onClick={vaciarCarrito} className='bg-red-800 px-10 rounded-2xl py-2 text-white font-bold text-2xl'>
                 Vaciar Carrito
             </button>
+            <Link to="/Checkout" className='bg-green-600 px-10 py-2 font-bold text-white rounded-2xl text-2xl'>Finalizar Compra</Link>
         </div>
     )
 }

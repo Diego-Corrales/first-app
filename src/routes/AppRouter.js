@@ -9,6 +9,7 @@ import { Footer } from "../componentes/Footer/Footer";
 import { LoginScreen } from "../componentes/LoginScreen/LoginScreen";
 import { LoginContext } from "../context/LoginContext";
 import { useContext } from "react";
+import { Checkout } from "../componentes/Checkout/Checkout";
 
 
 // usamos contexto de LoginContext para mostrar el componente Navbar y el Footer solo si el usuario esta logueado y lo consumimos en App
@@ -30,6 +31,7 @@ export const AppRouter = () => {
                   <Route path="/Discos/:CategoryId" element={ <ItemListContainer /> } />
                   <Route path="/detail/:itemId" element={ <ItemDetailContainer /> } />
                   <Route path="/Cart" element={ <Cart /> } />
+                  <Route path="/Checkout" element={ <Checkout /> } />
                 </Routes>
 
                 <Footer />
