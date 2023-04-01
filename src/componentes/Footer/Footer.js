@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
     return (
         
-        <footer class="bg-gray-800">
-            <div class="w-full container mx-auto p-4 md:px-6 md:py-8">
-                <div class="sm:flex sm:items-center sm:justify-between">
-                    <ul class="flex items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+        <footer className="bg-gray-800">
+            <div className="w-full container mx-auto p-4 md:px-6 md:py-8">
+                <div className="sm:flex sm:items-center sm:justify-between">
+                    <ul className="flex items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li className='px-6'>
                             <h6>Contactanos:</h6>
                             <p>Tel: 1111-2222</p>
@@ -24,15 +24,15 @@ export const Footer = () => {
                             <a href="https://twitter.com/" class="mr-4 hover:underline md:mr-6 ">Twitter</a>
                         </li>
                     </ul>
-                    <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                    <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
                     <Link to="/"><img src={logo} alt='logo-vikingo' className='w-20 mx-4'/></Link>
-                        <span class="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">
+                        <span className="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">
                             VIKING RECORDS
                         </span>
                     </a>
                 </div>
-                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">All Rights Reserved.</span>
+                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">All Rights Reserved.</span>
             </div>
         </footer>
 
