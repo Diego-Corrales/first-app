@@ -54,7 +54,9 @@ const ItemDetail = ({item}) => {
                     <br />
                     <p className="text-2xl font-bold text-center">{item.Discografia}</p>
                     <br />
-                    <p className="text-2xl font-bold text-center">AR${item.Precio}</p>
+                    <p className="font-bold text-center" >{item.Descripcion}</p>
+                    <br />
+                    <p className="text-2xl font-bold text-center">Precio: AR${item.Precio}</p>
                     <br />
                     { item.Stock <= 2 && 
                         <p className="text-center text-2xl font-bold text-red-600">

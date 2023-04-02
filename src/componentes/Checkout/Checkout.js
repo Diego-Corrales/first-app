@@ -88,12 +88,13 @@ export const Checkout = () => {
     // creamos un renderizado condicional para mostrar el numero de orden una vez que se envia el formulario
     if (orderId) {
         return (
-            <div className="my- container items-center p-4 m-4">
-                <h2>
+            <div className="container items-center p-10">
+                <h2 className='text-3xl py-2'>
                     Gracias por tu compra!
                 </h2>
-                <p>
-                    Tu numero de orden es: {orderId}
+                <p className='text-2xl py-4'>
+                    <span>Tu numero de orden es: </span>
+                    <span className="text-green-700 text-3xl font-semibold">{orderId}</span>
                 </p>
                 <hr />
                 <div className='py-6'>
