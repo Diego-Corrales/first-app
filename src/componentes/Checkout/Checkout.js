@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { dataBase } from '../../firebase/config'
-import { collection, addDoc, writeBatch, query, documentId, where, getDocs, docs } from 'firebase/firestore'
+import { collection, addDoc, writeBatch, query, documentId, where, getDocs } from 'firebase/firestore'
 
 export const Checkout = () => {
     const {cart, totalCompra, vaciarCarrito} = useContext(CartContext)
@@ -50,23 +50,24 @@ export const Checkout = () => {
             fecha: new Date()
         }
 
+        // creamos un batch para actualizar el stock de los productos
         const batch = writeBatch(dataBase)
 
-        // guardamos la orden en la base de datos y vaciamos el carrito
+        // creamos una referencia a la coleccion orders
         const ordersRef = collection(dataBase, 'orders')
 
-        // updatedoc - actualizamos el stock de los productos, traemos los datos de la base de datos, actualizamos el stock y lo subimos de nuevo
-        // ademas validamos que el stock sea mayor o igual a la cantidad que se quiere comprar, de lo contrario mostramos un alert y no se actualiza el stock
+        // creamos una referencia a la coleccion discos
         const productosRef = collection(dataBase, 'discos')
 
         const outOfStock = []
 
-        console.log( cart.map(prod => prod.id) )
-
+        // creamos una query para obtener los productos del carrito mediante la funcion where y el metodo in que recibe un array de ids
         const itemsRef = query(productosRef, where(documentId(), 'in', cart.map(prod => prod.id)))
 
+        // obtenemos los productos del carrito mediante la funcion getDocs
         const response = await getDocs(itemsRef)
 
+        // recorremos los productos del carrito y actualizamos el stock de cada uno, si el stock es menor a la cantidad del carrito, se agrega el producto al array outOfStock
         response.docs.forEach((doc) => {
             const item = cart.find(prod => prod.id === doc.id)
             console.log(item)
@@ -78,6 +79,7 @@ export const Checkout = () => {
             }
         })
 
+        // si el array outOfStock esta vacio, se envia la orden y se actualiza el stock de los productos, si no, se muestra un alert con el mensaje de que no hay stock suficiente
         if (outOfStock.length === 0) {
             await batch.commit()
 
