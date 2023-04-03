@@ -75,10 +75,16 @@ export const Navbar = () => {
                         Black Metal
                       </Link>
                       <Link
-                        to="/Discos/Pop"
+                        to="/Discos/Folk Metal"
                         className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
                       >
-                        Pop
+                        Folk Metal
+                      </Link>
+                      <Link
+                        to="/Discos/Industrial Metal"
+                        className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+                      >
+                        Industrial Metal
                       </Link>
                     </div>
                   )}

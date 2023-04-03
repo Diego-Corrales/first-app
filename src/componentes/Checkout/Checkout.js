@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { dataBase } from '../../firebase/config'
-import { collection, addDoc, getDoc, updateDoc, doc } from 'firebase/firestore'
+import { collection, addDoc, writeBatch, query, documentId, where, getDocs, docs } from 'firebase/firestore'
 
 export const Checkout = () => {
     const {cart, totalCompra, vaciarCarrito} = useContext(CartContext)
@@ -25,7 +25,7 @@ export const Checkout = () => {
     }
 
     // generamos un preventDefault para que no se recargue la pagina al enviar el formulario
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         
         // validaciones
@@ -50,38 +50,46 @@ export const Checkout = () => {
             fecha: new Date()
         }
 
-        console.log("submit", orden)
-
-        // updatedoc - actualizamos el stock de los productos, traemos los datos de la base de datos, actualizamos el stock y lo subimos de nuevo
-        // ademas validamos que el stock sea mayor o igual a la cantidad que se quiere comprar, de lo contrario mostramos un alert y no se actualiza el stock
-        const productosRef = collection(dataBase, 'productos')
-
-        cart.forEach((item) => {
-            const docRef = doc(productosRef, item.id)
-
-            getDoc(docRef)
-                .then((doc) => {
-                    if (doc.data().stock >= item.cantidad) {
-                        updateDoc(docRef, {
-                            stock: doc.data().stock - item.cantidad
-                        })
-                    } else {
-                        alert('No hay stock suficiente de ' + item.banda + ' - ' + item.Discografia)
-                    }
-
-                })
-        })
-
+        const batch = writeBatch(dataBase)
 
         // guardamos la orden en la base de datos y vaciamos el carrito
         const ordersRef = collection(dataBase, 'orders')
 
-        addDoc(ordersRef, orden)
+        // updatedoc - actualizamos el stock de los productos, traemos los datos de la base de datos, actualizamos el stock y lo subimos de nuevo
+        // ademas validamos que el stock sea mayor o igual a la cantidad que se quiere comprar, de lo contrario mostramos un alert y no se actualiza el stock
+        const productosRef = collection(dataBase, 'discos')
+
+        const outOfStock = []
+
+        console.log( cart.map(prod => prod.id) )
+
+        const itemsRef = query(productosRef, where(documentId(), 'in', cart.map(prod => prod.id)))
+
+        const response = await getDocs(itemsRef)
+
+        response.docs.forEach((doc) => {
+            const item = cart.find(prod => prod.id === doc.id)
+            console.log(item)
+
+            if (doc.data().Stock >= item.cantidad) {
+                batch.update(doc.ref, { Stock: doc.data().Stock - item.cantidad })
+            } else {
+                outOfStock.push(item)
+            }
+        })
+
+        if (outOfStock.length === 0) {
+            await batch.commit()
+
+            addDoc(ordersRef, orden)
             .then((doc) => {
                 setOrderId(doc.id)
                 vaciarCarrito()
 
             })
+        } else {
+            alert('No hay stock suficiente')
+        }
 
     }
 
