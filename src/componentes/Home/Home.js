@@ -2,7 +2,7 @@
 
 export const Home = () => {
     return (
-        <main className="w-full h-full">
+        <main className="w-full h-full bg-gradient-to-t from-slate-400 to-slate-600">
             <div className="text-center">
                 <h2 className="text-6xl py-8">BIENVENIDOS</h2>
                 <p className="text-3xl py-4">Todos los discos de tus bandas favoritas las encontraras solo en "Viking Records"</p>
@@ -58,7 +58,7 @@ export const Home = () => {
                     </div>
 
                 </div>
-                <div className="w-full md:w-1/3 p-6 mx-auto text-center text-4xl font-semibold flex flex-col justify-around">
+                <div className="w-full md:w-1/3 p-6 mx-auto text-center text-4xl font-semibold flex flex-col justify-around bg-gradient-to-r from-zinc-400 to-zinc-800 rounded-3xl">
                     <p>ROCK</p>
                     <p>HEAVY METAL</p>
                     <p>BLACK METAL</p>

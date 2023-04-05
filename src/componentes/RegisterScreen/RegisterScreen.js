@@ -31,16 +31,16 @@ export const RegisterScreen = () => {
     }
     
     return (
-        <div className="bg-amber-400 flex justify-center items-center w-full h-screen">
-            <div className="bg-white w-96 p-28 rounded-2xl">
-                <h1>Registrate</h1>
+        <div className="flex flex-wrap text-center justify-center items-center w-full h-screen bg-center bg-gradient-to-t from-slate-400 to-slate-600">
+            <div className="bg-gradient-to-t from-green-300 to-green-500 w-1/3 p-28 rounded-2xl">
+                <h1 className="py-4 text-2xl" >REGISTRATE</h1>
                 <hr />
                 
-                <form onSubmit={handleSubmit} className="my-6">
+                <form onSubmit={handleSubmit} className="py-4">
                     <input 
                         value={value.email}
                         type={ "text" }
-                        onChange={handleInputChange}
+py-6           onChange={handleInputChange}
                         className='form-control'
                         placeholder='Email'
                         name='email'
@@ -54,10 +54,10 @@ export const RegisterScreen = () => {
                         name='password'
                     />
 
-                    <button className="bg-slate-400 px-8 py-4 rounded-3xl my-4">Crear usuario</button>
+                    <button className="bg-white px-8 py-4 rounded-3xl my-4">Crear usuario</button>
                     <h3 className='py-4'>Ya eres usuario:</h3>
-                    <div className='flex'>
-                        <Link to="/Login" className='bg-slate-400 px-8 py-4 rounded-3xl my-4'>logearme</Link>
+                    <div className=''>
+                        <Link to="/Login" className='bg-white px-8 py-4 rounded-3xl my-4'>logearme</Link>
                     </div>
                 </form>
             </div>

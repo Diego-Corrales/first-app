@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LoginContext } from "../../context/LoginContext";
 import { useContext } from "react";
+import { FaCaretSquareDown } from "react-icons/fa";
 
 
 
@@ -23,7 +24,7 @@ export const Navbar = () => {
             <h1 className="text-white text-5xl 1ont-serif">VIKING RECORDS</h1>
         </div>
         <div>
-            <Link to="/"><img src={logo} alt='logo-vikingo' className='w-40'/></Link>
+            <Link to="/Home"><img src={logo} alt='logo-vikingo' className='w-48'/></Link>
         </div>
         <div className="relative flex items-center justify-between h-16">
           <div className="flex items-center justify-start">
@@ -31,22 +32,17 @@ export const Navbar = () => {
               <div className="ml-10 flex items-baseline">
                 <Link
                   to="/Home"
-                  className="px-3 py-2 rounded-md text-lg font-medium text-white hover:bg-gray-700"
+                  className="px-3 py-2 rounded-md text-3xl font-medium text-white hover:bg-gray-700"
                 >
                   HOME
-                </Link>
-                <Link
-                  to="/Merchandising"
-                  className="ml-4 px-3 py-2 rounded-md text-lg font-medium text-white hover:bg-gray-700"
-                >
-                  MERCHANDISING
                 </Link>
                 <div className="relative ml-4">
                   <button
                     onClick={toggleDropdown}
-                    className="px-3 py-2 rounded-md text-lg font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring"
+                    className="flex px-2 py-2 rounded-md text-3xl font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring"
                   >
-                    DISCOS 🔽
+                    <span>DISCOS</span>
+                    <span className='px-2'><FaCaretSquareDown /></span>
                   </button>
                   {showDropdown && (
                     <div className="absolute z-10 top-full left-0 w-full bg-gray-800 rounded-md shadow-lg py-1">
