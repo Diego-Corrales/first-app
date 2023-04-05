@@ -70,7 +70,7 @@ export const Checkout = () => {
         // recorremos los productos del carrito y actualizamos el stock de cada uno, si el stock es menor a la cantidad del carrito, se agrega el producto al array outOfStock
         response.docs.forEach((doc) => {
             const item = cart.find(prod => prod.id === doc.id)
-            console.log(item)
+
 
             if (doc.data().Stock >= item.cantidad) {
                 batch.update(doc.ref, { Stock: doc.data().Stock - item.cantidad })
@@ -90,7 +90,9 @@ export const Checkout = () => {
 
             })
         } else {
-            alert('No hay stock suficiente')
+            <div id="toast-top-left" class="fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow top-5 left-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
+                <div className="text-sm font-normal">No hay stock suficiente.</div>
+            </div>
         }
 
     }
@@ -98,17 +100,17 @@ export const Checkout = () => {
     // creamos un renderizado condicional para mostrar el numero de orden una vez que se envia el formulario
     if (orderId) {
         return (
-            <div className="container items-center p-10">
-                <h2 className='text-3xl py-2'>
+            <div className="w-full h-full bg-gradient-to-t from-slate-400 to-slate-600 items-center p-10">
+                <h2 className='text-3xl py-2 text-white font-semibold'>
                     Gracias por tu compra!
                 </h2>
                 <p className='text-2xl py-4'>
-                    <span>Tu numero de orden es: </span>
-                    <span className="text-green-700 text-3xl font-semibold">{orderId}</span>
+                    <span className='text-white'>Tu numero de orden es: </span>
+                    <span className="text-green-800 text-3xl font-semibold">{orderId}</span>
                 </p>
                 <hr />
                 <div className='py-6'>
-                    <Link to="/Discos" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded">Volver a Discos</Link>
+                    <Link to="/Discos" className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 px-4 rounded">Volver a Discos</Link>
                 </div>
             </div>
         )
@@ -120,11 +122,10 @@ export const Checkout = () => {
     }
     
     return (
-        <div className="my-5 container items-center p-4 m-4">
-            <h2>
-                Checkout
+        <div className="items-center p-4 w-full h-full bg-gradient-to-t from-slate-400 to-slate-600">
+            <h2 className='text-2xl mb-8 text-white'>
+                Completa el formulario para finalizar tu compra:
             </h2>
-            <hr />
 
             <form onSubmit={handleSubmit}>
                 <input 
@@ -152,7 +153,7 @@ export const Checkout = () => {
                     className="border-2 border-gray-300 p-2 rounded-lg w-full"
                     />
 
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+                <button className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 px-4 my-4 rounded">Enviar</button>
             </form>
         </div>
     )

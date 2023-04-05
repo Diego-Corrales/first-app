@@ -2,6 +2,7 @@
 
 import Item from '../Item/Item'
 
+// funcion que recibe un array de productos y los mapea para retornar un componente Item por cada producto
 const ItemList = ({ items }) => {
 
     return (

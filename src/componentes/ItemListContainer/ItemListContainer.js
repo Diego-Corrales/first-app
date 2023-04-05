@@ -10,8 +10,6 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
 
     const {CategoryId} = useParams();
-
-    console.log(CategoryId);
     
     
     useEffect(() => {
@@ -39,13 +37,14 @@ const ItemListContainer = () => {
         
     }, [CategoryId])
 
+    // retornamos un main con un titulo y el componente ItemList que recibe el array de productos
     return (
-        <div className="mx-10 my-5 justify-between text-center">
-            <h2 className="text-3xl font-bold underline">En esta seccion encontraras la lista mas variada y completa de discos y vinilos</h2>
-            <br />
-            <hr />
-            <ItemList items={productos}/>
-        </div>
+        <main className="bg-gradient-to-t from-slate-400 to-slate-600 py-4">
+            <div className="mx-10 justify-between text-center">
+                <h2 className="text-3xl font-bold py-10">Disfruta de nuestra mas variada y completa lista de discos y vinilos</h2>
+                <ItemList items={productos}/>
+            </div>
+        </main>
         
     )
 

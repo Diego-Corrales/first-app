@@ -32,7 +32,7 @@ export const LoginScreen = () => {
     
     return (
         <div className="flex flex-wrap text-center justify-center items-center w-full h-screen bg-center bg-gradient-to-t from-slate-400 to-slate-600">
-            <div className="bg-gradient-to-t from-green-300 to-green-500 w-1/3 p-8 rounded-2xl justify-center">
+            <div className="bg-gradient-to-t from-stone-300 to-stone-500 w-1/3 p-8 rounded-2xl justify-center">
                 <h1 className='m-4 text-2xl'>LOGIN</h1>
                 <hr />
                 
@@ -55,16 +55,16 @@ export const LoginScreen = () => {
                     />
 
                     <div className='justify-center m-4'>
-                        <button className="bg-white px-8 py-4 rounded-3xl">Entrar</button>
+                        <button className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 px-8 py-4 rounded-3xl">Entrar</button>
                     </div>
                     <h3 className='py-4'>No eres usuario?, Registrate a continuacion:</h3>
                     <hr />
                     <div className='flex justify-center'>
-                        <Link to="/register" className='bg-white px-8 py-4 rounded-3xl my-4'>Registrarme</Link>
+                        <Link to="/register" className='text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 px-8 py-4 rounded-3xl my-4'>Registrarme</Link>
                     </div>
                 </form>
                 <h3>O ingresa con tu cuenta de Google:</h3>
-                <button onClick={googleLogin} className="bg-white px-8 py-4 rounded-3xl my-4">Entrar con Google</button>
+                <button onClick={googleLogin} className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 px-8 py-4 rounded-3xl my-4">Entrar con Google</button>
 
             </div>
         </div>

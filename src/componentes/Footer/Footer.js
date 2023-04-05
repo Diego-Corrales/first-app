@@ -25,7 +25,7 @@ export const Footer = () => {
                         </li>
                     </ul>
                     <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
-                    <Link to="/"><img src={logo} alt='logo-vikingo' className='w-20 mx-4'/></Link>
+                    <Link to="/Home"><img src={logo} alt='logo-vikingo' className='w-20 mx-4'/></Link>
                         <span className="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">
                             VIKING RECORDS
                         </span>

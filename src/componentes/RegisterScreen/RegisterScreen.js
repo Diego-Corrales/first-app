@@ -32,7 +32,7 @@ export const RegisterScreen = () => {
     
     return (
         <div className="flex flex-wrap text-center justify-center items-center w-full h-screen bg-center bg-gradient-to-t from-slate-400 to-slate-600">
-            <div className="bg-gradient-to-t from-green-300 to-green-500 w-1/3 p-28 rounded-2xl">
+            <div className="bg-gradient-to-t from-stone-300 to-stone-500 w-1/3 p-28 rounded-2xl">
                 <h1 className="py-4 text-2xl" >REGISTRATE</h1>
                 <hr />
                 
@@ -40,7 +40,7 @@ export const RegisterScreen = () => {
                     <input 
                         value={value.email}
                         type={ "text" }
-py-6           onChange={handleInputChange}
+                        onChange={handleInputChange}
                         className='form-control'
                         placeholder='Email'
                         name='email'
@@ -54,10 +54,10 @@ py-6           onChange={handleInputChange}
                         name='password'
                     />
 
-                    <button className="bg-white px-8 py-4 rounded-3xl my-4">Crear usuario</button>
-                    <h3 className='py-4'>Ya eres usuario:</h3>
+                    <button className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 px-8 py-4 rounded-3xl my-4">Crear usuario</button>
+                    <h3 className='py-8'>Ya eres usuario:</h3>
                     <div className=''>
-                        <Link to="/Login" className='bg-white px-8 py-4 rounded-3xl my-4'>logearme</Link>
+                        <Link to="/Login" className='text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 px-8 py-4 rounded-3xl my-4'>logearme</Link>
                     </div>
                 </form>
             </div>

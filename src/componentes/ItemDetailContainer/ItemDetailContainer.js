@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { pedirProductoPorId } from "../../helpers/pedirDatos";
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { dataBase } from "../../firebase/config";
 import { doc, getDoc } from "firebase/firestore";

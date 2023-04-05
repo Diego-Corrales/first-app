@@ -18,7 +18,7 @@ const ItemCount = ( {max, cantidad, setCantidad, handleAgregar} ) => {
             <span className="px-10">{cantidad}</span>
             <button onClick={handleSumar} className={`rounded-2xl px-10 italic font-bold p-2 ${cantidad === max ? "bg-gray-500 pointer-events-none" : "bg-blue-800" }`}>+</button>
             <br/>
-            <button onClick={handleAgregar} className="bg-lime-600 rounded-2xl px-16 italic font-bolt p-2 text-lg">Sumar al carrito</button>
+            <button onClick={handleAgregar} className="text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 rounded-2xl px-16 italic font-bolt p-2 text-lg">Sumar al carrito</button>
         </div>
     )
 }
